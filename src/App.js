@@ -1,5 +1,15 @@
 import React from 'react';
-
-const App = () => <h1>Hello</h1>
-
+import Document from './Components/document.js';
+import Form from './Components/form.js';
+      
+class App extends React.Component {
+  render(){
+    return (
+      <div>
+        <Form />
+      </div>
+    )
+  }
+}    
+      
 export default App
