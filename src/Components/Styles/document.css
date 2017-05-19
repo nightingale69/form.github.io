@@ -1,0 +1,35 @@
+  .doc {
+    position: relative;
+    width: 45%;
+    margin-left: 50%;
+    border: 1px solid black;
+    padding: 3%;
+  }
+
+  .head {
+    margin-left: 50%;
+    width: 209px;
+  }
+
+  .caption {
+    padding-top: 5%;
+    padding-left: 45%;
+  }
+
+  .body__parag {
+    text-indent: 40px;
+  }
+
+  .subdiv {
+    width: 30%;
+  }
+
+  .depart {
+    width: 50%;
+  }
+
+  p,
+  label {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5em;
+  } 
