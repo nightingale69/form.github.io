@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import './Styles/document.css';
 
 class Document extends React.Component {
@@ -35,4 +35,4 @@ class Document extends React.Component {
     }
 }
 
-export default Document
+export default Document*/
