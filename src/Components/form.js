@@ -4,15 +4,22 @@ import './Styles/form.css';
 class Form extends React.Component {
     constructor(){
         super();
-        this.state = {a: ''}
+        this.state = {surname: ''};
+        this.state = {name: ''};
     }
     update(){
-        this.setState({
+        //Не убрал на всякий случай, для быстрой проверки
+        /*this.setState ({
             surname: this.refs.surname.value,
             name: this.refs.name.value,
-            secondname: this.refs.secondname.value,
-            begin: this.refs.begin.value,
-        });
+        });*/
+        console.log('Фамилия:', this.refs.surname.value);
+        console.log('Имя:', this.refs.name.value);
+        console.log('Отчество:', this.refs.secondname.value);
+        console.log('Начало отпуска:', this.refs.begin.value);
+        console.log('Окончание отпуска:', this.refs.end.value);
+        console.log('Срок:', this.refs.term.value);
+        console.log('Дата заявления:', this.refs.date.value);
     }
     render() {
         return (        
@@ -20,62 +27,62 @@ class Form extends React.Component {
                 <label className='add__lb'>Фамилия</label>
                 <input      
                     type='text'
-                    className='add__lastn' 
+                    className='add__lastn inpstyle' 
                     name='surname' 
                     required pattern='^[А-Яа-яЁё\s]+$'
                     ref='surname'
-                    onChange={this.update.bind(this)}
+                    onBlur={this.update.bind(this)}
                 /> {this.state.surname}
                 <label className='add__lb'>Имя</label>
                 <input 
                     type='text' 
-                    className='add__firstn' 
+                    className='add__firstn inpstyle' 
                     name='firstname' 
                     required pattern='^[А-Яа-яЁё\s]+$'
                     ref='name'
-                    onChange={this.update.bind(this)}
+                    onBlur={this.update.bind(this)}
                 /> {this.state.name}
                 <label className='add__lb'>Отчество</label>
                 <input 
                     type='text' 
-                    className='add__secondn' 
+                    className='add__secondn inpstyle' 
                     name='secondname' 
                     required pattern='^[А-Яа-яЁё\s]+$'
                     ref='secondname'
-                    onChange={this.update.bind(this)}
+                    onBlur={this.update.bind(this)}
                 /> {this.state.secondname}
                 <label className='add__lb'>Начало отпуска</label>
                 <input 
                     type='date' 
-                    className='add__startdate' 
+                    className='add__startdate inpstyle' 
                     required
                     ref='begin'
-                    onChange={this.update.bind(this)}
+                    onBlur={this.update.bind(this)}
                 /> {this.state.begin}
                 <label className='add__lb'>Окончание отпуска</label>
                 <input 
                     type='date' 
-                    className='add__endate' 
+                    className='add__endate inpstyle' 
                     required
                     ref='end'
-                    onChange={this.update.bind(this)}
+                    onBlur={this.update.bind(this)}
                 /> {this.state.end}
                 <label className='add__lb'>Срок</label>
                 <input 
                     type='number' 
-                    className='add__term' 
+                    className='add__term inpstyle' 
                     size="3" 
                     required
                     ref='term'
-                    onChange={this.update.bind(this)}
+                    onBlur={this.update.bind(this)}
                 /> {this.state.term}
                 <label className='add__lb'>Дата заявления</label>
                 <input 
                     type='date' 
-                    className='add__date' 
+                    className='add__date inpstyle' 
                     required
                     ref='date'
-                    onChange={this.update.bind(this)}
+                    onBlur={this.update.bind(this)}
                 /> {this.state.date}
                 <input 
                     type='submit' 
