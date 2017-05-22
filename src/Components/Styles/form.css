@@ -28,9 +28,7 @@
     padding: 5px;
   }
 
-  .add__fn, .add__sn, .add__ln, 
-  .add__start, .add__end, 
-  .add__term, .add__date {
+  .inpstyle {
     margin: 0 0 5px 1%;
     padding: 5px;
     width: 55%;
