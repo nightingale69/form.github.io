@@ -8,11 +8,6 @@ class Form extends React.Component {
         this.state = {name: ''};
     }
     update(){
-        //Не убрал на всякий случай, для быстрой проверки
-        /*this.setState ({
-            surname: this.refs.surname.value,
-            name: this.refs.name.value,
-        });*/
         console.log('Фамилия:', this.refs.surname.value);
         console.log('Имя:', this.refs.name.value);
         console.log('Отчество:', this.refs.secondname.value);
@@ -23,72 +18,57 @@ class Form extends React.Component {
     }
     render() {
         return (        
-            <form className='add'>
-                <label className='add__lb'>Фамилия</label>
+            <form className='form'>
+                <label className='form__label'>Фамилия</label>
                 <input      
                     type='text'
-                    className='add__lastn inpstyle' 
-                    name='surname' 
-                    required pattern='^[А-Яа-яЁё\s]+$'
+                    className='input' 
                     ref='surname'
                     onBlur={this.update.bind(this)}
                 /> {this.state.surname}
-                <label className='add__lb'>Имя</label>
+                <label className='form__label'>Имя</label>
                 <input 
                     type='text' 
-                    className='add__firstn inpstyle' 
-                    name='firstname' 
-                    required pattern='^[А-Яа-яЁё\s]+$'
+                    className='input' 
                     ref='name'
                     onBlur={this.update.bind(this)}
                 /> {this.state.name}
-                <label className='add__lb'>Отчество</label>
+                <label className='form__label'>Отчество</label>
                 <input 
                     type='text' 
-                    className='add__secondn inpstyle' 
-                    name='secondname' 
-                    required pattern='^[А-Яа-яЁё\s]+$'
+                    className='input' 
                     ref='secondname'
                     onBlur={this.update.bind(this)}
                 /> {this.state.secondname}
-                <label className='add__lb'>Начало отпуска</label>
+                <label className='form__label'>Начало отпуска</label>
                 <input 
                     type='date' 
-                    className='add__startdate inpstyle' 
-                    required
+                    className='input' 
                     ref='begin'
                     onBlur={this.update.bind(this)}
                 /> {this.state.begin}
-                <label className='add__lb'>Окончание отпуска</label>
+                <label className='form__label'>Окончание отпуска</label>
                 <input 
                     type='date' 
-                    className='add__endate inpstyle' 
-                    required
+                    className='input' 
                     ref='end'
                     onBlur={this.update.bind(this)}
                 /> {this.state.end}
-                <label className='add__lb'>Срок</label>
+                <label className='form__label'>Срок</label>
                 <input 
                     type='number' 
-                    className='add__term inpstyle' 
+                    className='input' 
                     size="3" 
-                    required
                     ref='term'
                     onBlur={this.update.bind(this)}
                 /> {this.state.term}
-                <label className='add__lb'>Дата заявления</label>
+                <label className='form__label'>Дата заявления</label>
                 <input 
                     type='date' 
-                    className='add__date inpstyle' 
-                    required
+                    className='input' 
                     ref='date'
                     onBlur={this.update.bind(this)}
                 /> {this.state.date}
-                <input 
-                    type='submit' 
-                    className='add__submit' 
-                    value='Подтвердить'
-                />
             </form>
         );
     }
