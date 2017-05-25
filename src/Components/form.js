@@ -5,54 +5,59 @@ class Form extends React.Component {
     constructor() {
         super();
             this.state = {
-                surname:'', name:'', secondname:'', 
-                begin:'', end:'', term:'', date:''
+                surname:'', 
+                name:'', 
+                secondname:'', 
+                vocationStart:'', 
+                vocationEnd:'', 
+                term:'', 
+                date:''
             };
     }
     
-    handleInputBlur1 = (e) => {
+    handleSurnameBlur = (e) => {
         this.setState({
             surname: e.target.value
         });
         console.log('Фамилия:', e.target.value);
     };
     
-    handleInputBlur2 = (e) => {
+    handleNameBlur = (e) => {
         this.setState({
             name: e.target.value
         });
         console.log('Имя:', e.target.value);
     };
     
-    handleInputBlur3 = (e) => {
+    handleSecondnameBlur = (e) => {
         this.setState({
             secondname: e.target.value
         });
         console.log('Отчество:', e.target.value);
     };
         
-    handleInputBlur4 = (e) => {
+    handleVocationStartBlur = (e) => {
         this.setState({
-            begin: e.target.value
+            vocationStart: e.target.value
         });
         console.log('Начало отпуска:', e.target.value);
     };
     
-    handleInputBlur5 = (e) => {
+    handleVocationEndBlur = (e) => {
         this.setState({
-            end: e.target.value
+            vocationEnd: e.target.value
         });
         console.log('Конец отпуска:', e.target.value);
     };
     
-    handleInputBlur6 = (e) => {
+    handleTermBlur = (e) => {
         this.setState({
             term: e.target.value
         });
         console.log('Срок:', e.target.value);
     };
     
-    handleInputBlur7 = (e) => {
+    handleDateBlur = (e) => {
         this.setState({
             date: e.target.value
         });
@@ -66,44 +71,44 @@ class Form extends React.Component {
                 <input      
                     type='text'
                     className='input' 
-                    onBlur={this.handleInputBlur1}
+                    onBlur={this.handleSurnameBlur}
                 /> {this.state.surname}
                 <label className='form__label'>Имя</label>
                 <input 
                     type='text' 
                     className='input' 
-                    onBlur={this.handleInputBlur2}
+                    onBlur={this.handleNameBlur}
                 /> {this.state.name}
                 <label className='form__label'>Отчество</label>
                 <input 
                     type='text' 
                     className='input' 
-                    onBlur={this.handleInputBlur3}
+                    onBlur={this.handleSecondnameBlur}
                 /> {this.state.secondname}
                 <label className='form__label'>Начало отпуска</label>
                 <input 
                     type='date' 
                     className='input' 
-                    onBlur={this.handleInputBlur4}
-                /> {this.state.begin}
+                    onBlur={this.handleVocationStartBlur}
+                /> {this.state.vocationStart}
                 <label className='form__label'>Окончание отпуска</label>
                 <input 
                     type='date' 
                     className='input' 
-                    onBlur={this.handleInputBlur5}
-                /> {this.state.end}
+                    onBlur={this.handleVocationEndBlur}
+                /> {this.state.vocationEnd}
                 <label className='form__label'>Срок</label>
                 <input 
                     type='number' 
                     className='input' 
                     size="3" 
-                    onBlur={this.handleInputBlur6}
+                    onBlur={this.handleTermBlur}
                 /> {this.state.term}
                 <label className='form__label'>Дата заявления</label>
                 <input 
                     type='date' 
                     className='input' 
-                    onBlur={this.handleInputBlur7}
+                    onBlur={this.handleDateBlur}
                 /> {this.state.date}
             </form>
         );
