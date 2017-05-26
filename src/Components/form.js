@@ -1,18 +1,18 @@
 import React from 'react';
-import './Styles/form.css';
+import '../styles/form.css';
 
 class Form extends React.Component {
     constructor() {
         super();
-            this.state = {
-                surname:'', 
-                name:'', 
-                secondname:'', 
-                vocationStart:'', 
-                vocationEnd:'', 
-                term:'', 
-                date:''
-            };
+        this.state = {
+            surname:'', 
+            name:'', 
+            secondname:'', 
+            vocationStart:'', 
+            vocationEnd:'', 
+            term:'', 
+            date:''
+        };
     }
     
     handleSurnameBlur = (e) => {
