@@ -1,11 +1,12 @@
 import React from 'react';
 //import Document from './Components/document.js';
 import Form from './Components/form.js';
+import './styles/app.css';
       
 class App extends React.Component {
-  render(){
+  render() {
     return (
-      <div>
+      <div className='app__form'>
         <Form />
       </div>
     )

@@ -1,0 +1,13 @@
+html,
+body {
+    height: 98%;
+    width: 99%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body.fontLoaded {
+    font-family: 'Open Sana', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
