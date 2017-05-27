@@ -1,4 +1,5 @@
 import React from 'react';
+import TextField from './TextField.js';
 import '../styles/form.css';
 
 class Form extends React.Component {
@@ -15,11 +16,11 @@ class Form extends React.Component {
         };
     }
     
-    handleSurnameBlur = (e) => {
+    handleSurnameBlur = () => {
         this.setState({
-            surname: e.target.value
+            surname: this.surname.refs.input.value
         });
-        console.log('Фамилия:', e.target.value);
+        console.log('Фамилия:', this.surname.refs.input.value);
     };
     
     handleNameBlur = (e) => {
@@ -67,10 +68,11 @@ class Form extends React.Component {
     render() {
         return (        
             <form className='form'>
-                <label className='form__label'>Фамилия</label>
-                <input      
-                    type='text'
-                    className='input' 
+                <TextField 
+                    className="form__text-field" 
+                    label="Фамилия" 
+                    type="text"
+                    ref={ component => this.surname = component}
                     onBlur={this.handleSurnameBlur}
                 /> {this.state.surname}
                 <label className='form__label'>Имя</label>
