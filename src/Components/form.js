@@ -16,53 +16,53 @@ class Form extends React.Component {
         };
     }
     
-    handleSurnameBlur = () => {
+    handleSurnameBlur = (value) => {
         this.setState({
-            surname: this.surname.refs.input.value
+            surname: value
         });
-        console.log('Фамилия:', this.surname.refs.input.value);
+        console.log("Фамилия:", value);
     };
     
-    handleNameBlur = (e) => {
+    handleNameBlur = (value) => {
         this.setState({
-            name: e.target.value
+            name: value
         });
-        console.log('Имя:', e.target.value);
+        console.log("Имя:", value);
     };
     
-    handleSecondnameBlur = (e) => {
+    handleSecondnameBlur = (value) => {
         this.setState({
-            secondname: e.target.value
+            secondname: value
         });
-        console.log('Отчество:', e.target.value);
+        console.log("Отчество:", value);
     };
         
-    handleVocationStartBlur = (e) => {
+    handleVocationStartBlur = (value) => {
         this.setState({
-            vocationStart: e.target.value
+            vocationStart: value
         });
-        console.log('Начало отпуска:', e.target.value);
+        console.log("Начало отпуска:", value);
     };
     
-    handleVocationEndBlur = (e) => {
+    handleVocationEndBlur = (value) => {
         this.setState({
-            vocationEnd: e.target.value
+            vocationEnd: value
         });
-        console.log('Конец отпуска:', e.target.value);
+        console.log("Конец отпуска:", value);
     };
     
-    handleTermBlur = (e) => {
+    handleTermBlur = (value) => {
         this.setState({
-            term: e.target.value
+            term: value
         });
-        console.log('Срок:', e.target.value);
+        console.log("Срок:", value);
     };
     
-    handleDateBlur = (e) => {
+    handleDateBlur = (value) => {
         this.setState({
-            date: e.target.value
+            date: value
         });
-        console.log('Дата заявления:', e.target.value);
+        console.log("Дата заявления:", value);
     };
 
     render() {
@@ -72,44 +72,43 @@ class Form extends React.Component {
                     className="form__text-field" 
                     label="Фамилия" 
                     type="text"
-                    ref={ component => this.surname = component}
                     onBlur={this.handleSurnameBlur}
                 /> {this.state.surname}
-                <label className='form__label'>Имя</label>
-                <input 
-                    type='text' 
-                    className='input' 
+                <TextField 
+                    className="form__text-field" 
+                    label="Имя" 
+                    type="text"
                     onBlur={this.handleNameBlur}
                 /> {this.state.name}
-                <label className='form__label'>Отчество</label>
-                <input 
-                    type='text' 
-                    className='input' 
+                <TextField 
+                    className="form__text-field" 
+                    label="Отчество" 
+                    type="text"
                     onBlur={this.handleSecondnameBlur}
                 /> {this.state.secondname}
-                <label className='form__label'>Начало отпуска</label>
-                <input 
-                    type='date' 
-                    className='input' 
+                <TextField 
+                    className="form__text-field" 
+                    label="Начало отпуска" 
+                    type="date"
                     onBlur={this.handleVocationStartBlur}
                 /> {this.state.vocationStart}
-                <label className='form__label'>Окончание отпуска</label>
-                <input 
-                    type='date' 
-                    className='input' 
+                <TextField 
+                    className="form__text-field" 
+                    label="Конец отпуска" 
+                    type="date"
                     onBlur={this.handleVocationEndBlur}
                 /> {this.state.vocationEnd}
-                <label className='form__label'>Срок</label>
-                <input 
-                    type='number' 
-                    className='input' 
-                    size="3" 
+                <TextField 
+                    className="form__text-field" 
+                    label="Срок" 
+                    type="number"
+                    size="2"
                     onBlur={this.handleTermBlur}
                 /> {this.state.term}
-                <label className='form__label'>Дата заявления</label>
-                <input 
-                    type='date' 
-                    className='input' 
+                <TextField 
+                    className="form__text-field" 
+                    label="Дата заявления" 
+                    type="date"
                     onBlur={this.handleDateBlur}
                 /> {this.state.date}
             </form>
