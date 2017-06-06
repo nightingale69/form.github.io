@@ -6,13 +6,51 @@ class Form extends React.Component {
     constructor() {
         super();
         this.state = {
-            surname:'', 
-            name:'', 
-            secondname:'', 
-            vocationStart:'', 
-            vocationEnd:'', 
-            term:'', 
-            date:''
+            handleBlur: 
+            [
+                {
+                    label: "Фамилия", 
+                    type: "text",
+                    onBlur: "this.handleSurnameBlur"
+                },
+            
+                {
+                    label: "Имя", 
+                    type: "text",
+                    onBlur: "this.handleNameBlur"
+                },
+            
+                {
+                    label: "Отчество", 
+                    type: "text",
+                    onBlur: "this.handleSecondnameBlur"
+                },
+            
+                {
+                    label: "Начало отпуска", 
+                    type: "date",
+                    onBlur: "this.handleVocationStartBlur"
+                },
+            
+                {
+                    label: "Конец отпуска", 
+                    type: "date",
+                    onBlur: "this.handleVocationEndBlur"
+                },
+            
+                {
+                    label: "Срок", 
+                    type: "number",
+                    size: "2",
+                    onBlur: "this.handleTermBlur"
+                },
+            
+                {
+                    label: "Дата заявления", 
+                    type: "date",
+                    onBlur: "this.handleDateBlur"
+                }
+            ]
         };
     }
     
@@ -68,49 +106,7 @@ class Form extends React.Component {
     render() {
         return (        
             <form className='form'>
-                <TextField 
-                    className="form__text-field" 
-                    label="Фамилия" 
-                    type="text"
-                    onBlur={this.handleSurnameBlur}
-                /> {this.state.surname}
-                <TextField 
-                    className="form__text-field" 
-                    label="Имя" 
-                    type="text"
-                    onBlur={this.handleNameBlur}
-                /> {this.state.name}
-                <TextField 
-                    className="form__text-field" 
-                    label="Отчество" 
-                    type="text"
-                    onBlur={this.handleSecondnameBlur}
-                /> {this.state.secondname}
-                <TextField 
-                    className="form__text-field" 
-                    label="Начало отпуска" 
-                    type="date"
-                    onBlur={this.handleVocationStartBlur}
-                /> {this.state.vocationStart}
-                <TextField 
-                    className="form__text-field" 
-                    label="Конец отпуска" 
-                    type="date"
-                    onBlur={this.handleVocationEndBlur}
-                /> {this.state.vocationEnd}
-                <TextField 
-                    className="form__text-field" 
-                    label="Срок" 
-                    type="number"
-                    size="2"
-                    onBlur={this.handleTermBlur}
-                /> {this.state.term}
-                <TextField 
-                    className="form__text-field" 
-                    label="Дата заявления" 
-                    type="date"
-                    onBlur={this.handleDateBlur}
-                /> {this.state.date}
+                {this.state.handleBlur.map((field, i) => <TextField key = {i} handleBlur = {field} />)}
             </form>
         );
     }
