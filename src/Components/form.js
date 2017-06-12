@@ -65,10 +65,62 @@ class Form extends React.Component {
         console.log("Дата заявления:", value);
     };
 
+    var fields = [
+        {
+        surname: "",
+        label: "Фамилия", 
+        type: "text",
+        onBlur: "this.handleSurnameBlur"
+        },
+        
+        {
+        name:"",
+        label: "Имя", 
+        type: "text",
+        onBlur: "this.handleNameBlur"
+        },
+            
+        {
+        secondname:"",
+        label: "Отчество", 
+        type: "text",
+        onBlur: "this.handleSecondnameBlur"
+        },
+            
+        {
+        vocationStart:"",
+        label: "Начало отпуска", 
+        type: "date",
+        onBlur: "this.handleVocationStartBlur"
+        },
+            
+        {
+        vocationEnd:"",
+        label: "Конец отпуска", 
+        type: "date",
+        onBlur: "this.handleVocationEndBlur"
+        },
+            
+        {
+        term:"",
+        label: "Срок", 
+        type: "number",
+        size: "2",
+        onBlur: "this.handleTermBlur"
+        },
+            
+        {
+        date:"",
+        label: "Дата заявления", 
+        type: "date",
+        onBlur: "this.handleDateBlur"
+        }
+    ];
+
     render() {
         return (        
             <form className='form'>
-                {this.state.handleBlur.map((field, i) => <TextField key = {i} handleBlur = {field} />)}
+                <TextField { type, size, label } = {fields.map} />
             </form>
         );
     }
