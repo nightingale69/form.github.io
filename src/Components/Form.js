@@ -56,48 +56,6 @@ class Form extends React.Component {
         console.log(value);
     };
 
-    /*handleNameBlur = (value) => {
-        this.setState({
-            name: value
-        });
-        console.log('Имя:', value);
-    };
-
-    handleSecondnameBlur = (value) => {
-        this.setState({
-            secondname: value
-        });
-        console.log('Отчество:', value);
-    };
-
-    handleVocationStartBlur = (value) => {
-        this.setState({
-            vocationStart: value
-        });
-        console.log('Начало отпуска:', value);
-    };
-
-    handleVocationEndBlur = (value) => {
-        this.setState({
-            vocationEnd: value
-        });
-        console.log('Конец отпуска:', value);
-    };
-
-    handleTermBlur = (value) => {
-        this.setState({
-            term: value
-        });
-        console.log('Срок:', value);
-    };
-
-    handleDateBlur = (value) => {
-        this.setState({
-            date: value
-        });
-        console.log('Дата заявления:', value);
-    };*/
-
 	render() {
 		return (
 			<form className="form">
