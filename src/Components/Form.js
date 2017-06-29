@@ -45,24 +45,18 @@ class Form extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			surname:'',
-			name: '',
-			secondname: '',
-			vocationStart: '',
-			vocationEnd: '',
-			term: '',
-			date: ''
+			label: ''
 		};
 	}
 
-	handleSurnameBlur = (value) => {
-        this.setState({
-            surname: value
+	handleFieldsBlur = (value) => {
+		this.setState({
+				label: value
         });
-        console.log('Фамилия:', value);
+        console.log(value);
     };
 
-    handleNameBlur = (value) => {
+    /*handleNameBlur = (value) => {
         this.setState({
             name: value
         });
@@ -102,13 +96,13 @@ class Form extends React.Component {
             date: value
         });
         console.log('Дата заявления:', value);
-    };
+    };*/
 
 	render() {
 		return (
 			<form className="form">
 				{fields.map((field, index) => <TextField key={index} label={field.label} type={field.type} size={field.size}
-          onBlur={this.handleSurnameBlur}
+          onBlur={this.handleFieldsBlur}
           />)}
 			</form>
 		);
