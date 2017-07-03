@@ -4,38 +4,38 @@ import '../styles/form.css';
 
 var fields = [
 	{
-		surname: '',
+		id: '1',
 		label: 'Фамилия',
 		type: 'text'
 	},
 	{
-		name: '',
+		id: '2',
 		label: 'Имя',
 		type: 'text'
 	},
 	{
-		secondname: '',
+		id: '3',
 		label: 'Отчество',
 		type: 'text'
 	},
 	{
-		vocationStart: '',
+		id: '4',
 		label: 'Начало отпуска',
 		type: 'date'
 	},
 	{
-		vocationEnd: '',
+		id: '5',
 		label: 'Конец отпуска',
 		type: 'date'
 	},
 	{
-		term: '',
+		id: '6',
 		label: 'Срок',
 		type: 'number',
 		size: '2'
 	},
 	{
-		date: '',
+		id: '7',
 		label: 'Дата заявления',
 		type: 'date'
 	}
@@ -45,23 +45,29 @@ class Form extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			label: ''
 		};
 	}
 
-	handleFieldsBlur = (value) => {
+	handleFieldBlur = (value, id) => {
 		this.setState({
-				label: value
+				value
         });
-        console.log(value);
+        console.log(id, value);
     };
 
 	render() {
 		return (
 			<form className="form">
-				{fields.map((field, index) => <TextField key={index} label={field.label} type={field.type} size={field.size}
-          onBlur={this.handleFieldsBlur}
-          />)}
+				{fields.map((field, index) =>
+					<TextField
+						key={index}
+						id={field.id}
+						label={field.label}
+						type={field.type}
+						size={field.size}
+          	onBlur={this.handleFieldBlur}
+          />
+				)}
 			</form>
 		);
 	}
