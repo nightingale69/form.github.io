@@ -9,13 +9,14 @@ class TextField extends React.Component {
     };
 
 	render() {
-		const { type, size, label } = this.props;
+		const { type, size, label, id } = this.props;
 
 		return (
 			<div className="text-field">
 				<label className="text-field__label">{label}</label>
 				<input
 					className="text-field__input"
+          id={id}
 					type={type}
 					size={size}
 					onBlur={this.handleBlur}
