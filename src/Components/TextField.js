@@ -4,8 +4,9 @@ import '../styles/textfield.css';
 class TextField extends React.Component {
 	handleBlur = (e) => {
         const value = e.target.value;
-				console.log('Поле',this.props.id,':', value)
-				this.props.onBlur(value);
+				const idField = this.props.id
+				//console.log('Поле',this.props.id,':', value)
+				this.props.onBlur(idField, value);
 
   };
 
