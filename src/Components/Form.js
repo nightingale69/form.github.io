@@ -51,18 +51,20 @@ var fields = [
 class Form extends React.Component {
 	constructor() {
 		super();
+		this.onBlur = this.handleFieldBlur.bind(this);
 		this.state = {
 		};
 	}
 
-	handleFieldBlur = (value) => {
-		this.setState({value});
+	handleFieldBlur = (idField ,value) => {
+		this.setState({idField: value});
 
-		console.log(value)
+		console.log('Поле', idField,':', value)
+
   };
 
 	render() {
-		const {value} = this.props
+
 		return (
 			<form className="form">
 				{fields.map((field, index) =>
