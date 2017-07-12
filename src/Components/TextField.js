@@ -4,15 +4,12 @@ import '../styles/textfield.css';
 class TextField extends React.Component {
 	handleBlur = (e) => {
         const value = e.target.value;
-				const idField = this.props.id
-				//console.log('Поле',this.props.id,':', value)
+				const idField = this.props.id;
 				this.props.onBlur(idField, value);
-
   };
 
 	render() {
 		const { type, size, label, id } = this.props;
-
 		return (
 			<div className="text-field">
 				<label className="text-field__label">{label}</label>

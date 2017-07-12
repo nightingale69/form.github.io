@@ -6,65 +6,55 @@ var fields = [
 	{
 		id: '1',
 		label: 'Фамилия',
-		type: 'text',
-		placeholder:''
+		type: 'text'
 	},
 	{
 		id: '2',
 		label: 'Имя',
-		type: 'text',
-		placeholder:''
+		type: 'text'
 	},
 	{
 		id: '3',
 		label: 'Отчество',
-		type: 'text',
-		placeholder:''
+		type: 'text'
 	},
 	{
 		id: '4',
 		label: 'Начало отпуска',
-		type: 'date',
-		placeholder:''
+		type: 'date'
 	},
 	{
 		id: '5',
 		label: 'Конец отпуска',
-		type: 'date',
-		placeholder:''
+		type: 'date'
 	},
 	{
 		id: '6',
 		label: 'Срок',
 		type: 'number',
-		size: '2',
-		placeholder:''
+		size: '2'
 	},
 	{
 		id: '7',
 		label: 'Дата заявления',
-		type: 'date',
-		placeholder:''
+		type: 'date'
 	}
 ];
 
 class Form extends React.Component {
 	constructor() {
 		super();
-		this.onBlur = this.handleFieldBlur.bind(this);
-		this.state = {
-		};
+		this.state = {};
 	}
 
-	handleFieldBlur = (idField ,value) => {
-		this.setState({idField: value});
-
+	handleFieldBlur = (idField, value) => {
+		this.setState({
+			idField: value
+		});
 		console.log('Поле', idField,':', value)
-
   };
 
 	render() {
-
 		return (
 			<form className="form">
 				{fields.map((field, index) =>
