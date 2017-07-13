@@ -6,7 +6,7 @@ class TextField extends React.Component {
 		const value = e.target.value;
 		const idField = this.props.id;
 		this.props.onBlur(idField, value);
-  };
+ 	};
 
 	render() {
 		const { type, size, label, id } = this.props;
