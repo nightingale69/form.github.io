@@ -52,7 +52,7 @@ class Form extends React.Component {
 			idField: value
 		});
 		console.log('Поле', idField,':', value)
-  };
+	};
 
 	render() {
 		return (
