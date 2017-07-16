@@ -42,11 +42,6 @@ var fields = [
 ];
 
 class Form extends React.Component {
-	constructor() {
-		super();
-		this.state = {};
-	}
-
 	handleFieldBlur = (idField, value) => {
 		this.setState({
 			idField: value
