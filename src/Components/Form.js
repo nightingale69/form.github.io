@@ -44,7 +44,7 @@ var fields = [
 class Form extends React.Component {
 	handleFieldBlur = (idField, value) => {
 		this.setState({
-			idField: value
+			value
 		});
 		console.log('Поле', idField,':', value)
 	};
