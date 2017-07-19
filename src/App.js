@@ -4,12 +4,12 @@ import Form from './Components/Form.js';
 import './styles/app.css';
 
 class App extends React.Component {
-	handleFormField = (idField, value) => {};
+	handleFormChange = (idField, value) => {};
 
 	render() {
 		return (
 			<div className="app__form">
-				<Form onBlur={this.handleFormField}/>
+				<Form onChange={this.handleFormChange}/>
 			</div>
 		);
 	}
