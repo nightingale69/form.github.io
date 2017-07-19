@@ -42,10 +42,6 @@ var fields = [
 ];
 
 class Form extends React.Component {
-	handleFieldBlur = (idField, value) => {
-		this.props.onBlur(idField, value);
-	};
-
 	render() {
 		return (
 			<form className="form">
@@ -56,7 +52,7 @@ class Form extends React.Component {
 						label={field.label}
 						type={field.type}
 						size={field.size}
-						onBlur={this.handleFieldBlur}
+						onBlur={this.props.onChange}
 					/>
 				)}
 			</form>
