@@ -1,5 +1,5 @@
 import React from 'react';
-//import Document from './Components/document.js';
+import Document from './Components/Document.js';
 import Form from './Components/Form.js';
 import './styles/app.css';
 
