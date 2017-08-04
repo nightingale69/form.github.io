@@ -1,33 +1,31 @@
 import React from 'react';
-//import './styles/document.css';
+import '../styles/document.css';
 
 class Document extends React.Component {
 	render() {
 		return (
 			<div className='document'>
-				<div className='head'>
+				<div className='document__head'>
 					<p>Директору департамента по управлению персоналом Сидоровой Ё.Ё.</p>
-					<p>От{this.props.idField}
+					<p>От {this.props.surname} {this.props.name} {this.props.secondname}
 					</p>
 				</div>
-				<div className='caption'>
+				<div className='document__caption'>
 					<p>Заявление</p>
 				</div>
-				<div className='body'>
-					<p className='body__parag'>Прошу Вас предоставить мне ежегодный
-                    опачиваемый отпуск с "__"____________20__ года
-                    по "__"____________20__ года сроком на __ календарных дней.</p>
+				<div className='document__body'>
+					<p className='document__parag'>Прошу Вас предоставить мне ежегодный оплачиваемый отпуск с {this.props.vocationStart} года по {this.props.vocationEnd} года сроком на {this.props.term} календарных дней.</p>
 				</div>
-				<div className='date'>
-					<p>Дата________________</p>
+				<div className='document__date'>
+					<p>Дата {this.props.date}</p>
 				</div>
-				<div className='sign'>
+				<div className='document__sign'>
 					<p>Подпись________________</p>
 				</div>
-				<div className='subdiv'>
+				<div className='document__subdiv'>
 					<p>Не возражаю Руководитель подразделения /________ /</p>
 				</div>
-				<div className='depart'>
+				<div className='document__depart'>
 					<p>Директор департамента по управлению персоналом Сидорова Ё.Ё.</p>
 				</div>
 			</div>
