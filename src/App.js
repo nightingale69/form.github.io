@@ -18,14 +18,21 @@ class App extends React.Component {
 	}
 
 	handleFormChange = (idField, value) => {
-		this.setState({
-			surname: value,
-			name: value,
-			secondname: value,
-			date: value,
-			term: value
-		})
-		console.log(idField, value);
+		if (idField==='1') {
+			this.setState({surname: value})
+		} else if (idField==='2') {
+			this.setState({name: value})
+		} else if (idField==='3') {
+			this.setState({secondname: value})
+		} else if (idField==='4') {
+			this.setState({vocationStart: value})
+		} else if (idField==='5'){
+			this.setState({vocationEnd: value})
+		} else if (idField==='6'){
+			this.setState({term: value})
+		} else if (idField==='7'){
+			this.setState({date: value})
+		}
 	}
 
 	render() {
@@ -36,6 +43,8 @@ class App extends React.Component {
 					surname={this.state.surname}
 					name={this.state.name}
 					secondname={this.state.secondname}
+					vocationStart={this.state.vocationStart}
+					vocationEnd={this.state.vocationEnd}
 					date={this.state.date}
 					term={this.state.term}
 				/>
