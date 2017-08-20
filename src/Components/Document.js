@@ -14,7 +14,7 @@ class Document extends React.Component {
 					<p>Заявление</p>
 				</div>
 				<div className='document__body'>
-					<p className='document__parag'>Прошу Вас предоставить мне ежегодный оплачиваемый отпуск с {this.props.vocationStart} года по {this.props.vocationEnd} года сроком на {this.props.term} календарных дней.</p>
+					<p className='document__parag'>Прошу Вас предоставить мне ежегодный оплачиваемый отпуск с {this.props.vocationStart} по {this.props.vocationEnd} сроком на {this.props.term} календарных дней.</p>
 				</div>
 				<div className='document__date'>
 					<p>Дата {this.props.date}</p>
