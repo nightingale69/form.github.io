@@ -3,3 +3,8 @@
     float: left;
     width: 100%;
 }
+
+.app__valid {
+    width: 30%;
+    color: red;
+}
