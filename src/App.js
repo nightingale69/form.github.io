@@ -27,7 +27,8 @@ class App extends React.Component {
 					validation.innerText = 'При вводе используется только кириллица'
 				} else {
 					this.setState({surname: value});
-					localStorage.setItem('surname', value)
+					localStorage.setItem('surname', value);
+					validation.innerText = ''
 				};
 				break;
 			case '2':
@@ -37,7 +38,8 @@ class App extends React.Component {
 					validation.innerText = 'При вводе используется только кириллица'
 				} else {
 					this.setState({name: value});
-					localStorage.setItem('name', value)
+					localStorage.setItem('name', value);
+					validation.innerText = ''
 				};
 				break;
 			case '3':
@@ -47,7 +49,8 @@ class App extends React.Component {
 					validation.innerText = 'При вводе используется только кириллица'
 				} else {
 					this.setState({secondname: value});
-					localStorage.setItem('secondname', value)
+					localStorage.setItem('secondname', value);
+					validation.innerText = ''
 				};
 				break;
 			case '4':
@@ -55,7 +58,8 @@ class App extends React.Component {
 					validation.innerText = ('Неправильный год "Начало отпуска"')
 				} else {
 					this.setState({vocationStart: value});
-					localStorage.setItem('vocationStart', value)
+					localStorage.setItem('vocationStart', value);
+					validation.innerText = ''
 				};
 				break;
 			case '5':
@@ -63,7 +67,8 @@ class App extends React.Component {
 					validation.innerText = ('Неправильный год "Конец отпуска"')
 				} else {
 					this.setState({vocationEnd: value});
-					localStorage.setItem('vocationEnd', value)
+					localStorage.setItem('vocationEnd', value);
+					validation.innerText = ''
 				};
 				break;
 			case '6':
@@ -73,7 +78,8 @@ class App extends React.Component {
 					validation.innerText = ('Вводимое значение не более 99')
 				} else {
 					this.setState({term: value});
-					localStorage.setItem('term', value)
+					localStorage.setItem('term', value);
+					validation.innerText = ''
 				};
 				break;
 			case '7':
@@ -81,7 +87,8 @@ class App extends React.Component {
 					validation.innerText = ('Неправильный год в "Дата"')
 				} else {
 					this.setState({date: value});
-					localStorage.setItem('date', value)
+					localStorage.setItem('date', value);
+					validation.innerText = ''
 				};
 				break;
 			default:
